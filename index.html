@@ -6,39 +6,28 @@
 </head>
 
 <style>
-    body{
-        overflow-x: hidden;
-    }
+.video-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
 
-    .video-container{
-        width: 100vw;
-        height: 100vh;
-    }
-
-    iframe {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 100vw;
-        height: 100vh;
-        transform: translate(-50%, -50%);
-    }
-
-    @media (min-aspect-ratio: 16/9) {
-        .video-container iframe {
-            height: 56.25vw;
-        }
-    }
-
-    @media (max-aspect-ratio: 16/9) {
-        .video-container iframe {
-            width: 177.78vh;
-        }
-    }
+.video-container iframe {
+	min-width: 100%;
+	min-height: 100%;
+  position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	object-fit: cover;
+}
 </style>
 <body>
-<div class="video-container">
-    <iframe src="https://www.youtube.com/embed/KYwA5k00p2I?controls=0&autoplay=1"></iframe>
-</div>
+    <div class="video-container">
+        <iframe src="https://www.youtube-nocookie.com/embed/LDU_Txk06tM?autoplay=1&controls=0&showinfo=0&autohide=1" allow="autoplay"></iframe>
+    </div>
 </body>
 </html>
